@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <button id ="title-btn">ON/OFF</button>
+    <h1 id ="title"> 안녕하세요 </h1>
+
+    <button id ="toggle-btn"> 손자병법 </button>
+    <div style="display: none;"> 
+        <p>孫子曰 : 兵者, 國之大事. 死生之地, 存亡之道, 不可不察也.</p>
+        <p>손자가 말했다. 전쟁(兵)은 국가의 중대사이다. 전쟁터는 병사의 생사가 달려있는 곳이며, 국가의 존재와 멸망이 달려 있는 길이므로, 세심히 관찰해야 한다. </p>
+        
+   
+
+    <button id ="toggle-btn2"> AND </button>
+        <div style="display: none;">
+        <p> 故經之以五事, 校之以七計, 而索其情. 一曰道, 二曰天, 三曰地, 四曰將, 五曰法. </p>
+        <p> 그러므로 다섯가지 원칙과, 일곱가지 계산으로 비교하여 적과 나의 실정을 정확히 탐색해야 한다.  그 다섯 가지란 첫째는 지도자의 능력(道), 둘째는 기상조건(天), 세째는 지형조건(地), 네째는 장군의  능력(將), 다섯째는 군대에 관한 법령(法)이다 </p>
+    </div> </div> 
+    <br><hr>     
+
+<button id="box-fade">버튼</button> <button id="dots">동그라미</button>
+<div class="yebox">
+    <style>
+        .yebox{
+            width: 900px;
+            height: 200px;
+            background-color: yellow;
+            border: 12px solid orange;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style> </div>
+
+
+
+<div id = "round">
+    <div class="my-box2"></div>
+    <div class="my-box3"></div>
+    <div class="my-box4"></div>
+
+    <style>
+        .my-box2{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 20px;
+            position: relative;
+            left:300px;
+            top:-300px;
+        }
+        .my-box3{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 20px;
+            position: relative;
+            left:500px;
+            top:-340px;
+        }
+
+        .my-box4{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 20px;
+            position: relative;
+            left:700px;
+            top:-380px;
+        }
+    </style> </div> 
+
+<button id="slides">슬라이드</button>
+<div id ="star">
+    <style>
+
+#star {
+      margin: 20px;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid pink;
+      position: fixed;
+}
+
+    </style>
+</div>
+
+
+
+    <script>
+        $("#title-btn").on("click", function() {
+            $("#title").toggle(1000);
+    }); 
+
+    $("#toggle-btn+div").hide();
+    $("#toggle-btn").on("click", function() {
+        $(this).next().toggle("slow");
+    })
+
+    $("#toggle-btn2").on("click", function() {
+        $(this).next().toggle("fast");
+    })
+
+    //mouseenter mouseleave
+
+    $("#box-fade").on("mouseenter mouseleave", function() {
+        $(this).next().toggle("fast");
+    })
+
+    $("#dots").on("click", function() {
+        $("#round").fadeToggle("fast");
+    })
+
+
+    $("#slides").on("click", function() {
+        $("#star").slideToggle("fast");
+    })
+
+    </script>
+
+</body>
+</html>

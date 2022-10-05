@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <style>
+.move {
+   opacity: 0%;
+}
+.move.on {
+    transition:all 1s;
+    opacity: 100%;
+}
+    </style>
+
+    <img src ="./1.jpg" alt="" id = "myimg" class="move"> 
+
+    <script>
+        //화면 시작 전에는 아무것도 보이지 않고 
+        // 로드가 끝나면 이미지가 보이는 이벤트 
+        
+
+        // 로드가 되었을때 이미지 트랜지션이 들어간 css 의 클래스를 추가 
+      /*  $( function(){
+            $("#myimg").addClass("on");
+         }); */ 
+
+         $(document).scroll(function(){
+            $("#myimg").addClass("on");
+         })
+
+    </script>
+</body>
+</html>

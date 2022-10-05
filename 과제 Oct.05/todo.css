@@ -1,0 +1,113 @@
+Body {
+    font-family: 'Raleway', sans-serif;.
+    text-align: center;
+}
+
+
+#dayt
+{
+    display: flex;
+    font-size: 40px;
+    font-weight:800;
+    color:  #2ecc71;
+    margin: 30px;
+}
+
+
+
+#body3 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+#todoInput {
+    width:450px; height:40px;  
+    border: none;
+     border-bottom: 3px solid #2ecc71;
+    padding:10px;
+    font-size:16px;
+    color: #2ecc71;
+    margin: 1px;
+
+   
+}
+
+
+
+
+    #todoadd, #select
+    #todoadd::after ,  #select::after{
+      -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    #todoadd {
+      background: #2ecc71;;
+      border: 3px solid #2ecc71;
+      border-radius: 0px;
+      color: white;
+      font-size: 1.6em;
+      font-weight: bold;
+      margin: 10px;
+      height:35px; 
+      width: 35px;
+    }
+
+    #select-wh {
+        text-align: center;
+    }
+
+    
+    #select {
+        background: #2ecc71;;
+        border: 3px solid #2ecc71;
+        border-radius: 0px;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 10px;
+        height:50px; 
+        width: 100px;
+
+      }
+    
+    #todoadd::before,
+    #todoadd::after {
+      background: white;
+      color:  #2ecc71;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+
+    #todoadd:hover {
+        background: white;
+        color:  #2ecc71;
+    }
+
+
+
+ul > li  {
+    list-style:none;
+    border-bottom: 2px solid #2ecc71;
+    width: 600px;
+
+    }
+
+
+button {
+    background: #2ecc71;;
+    border: 0px solid #2ecc71;
+    border-radius: 0px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+    height:30px; 
+    width: 30px;
+}   
+
+

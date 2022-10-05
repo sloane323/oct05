@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1 id="title">안녕하세요</h1>
+<ul id ="list">
+<li> 첫번째 </li>
+<li> 두번째 </li>
+<li> 세번째 </li>
+<li> 네번째 </li>
+<li> 다섯번째 </li>
+</ul>
+
+<input type="text" id ="name"> 
+    <script>
+        // window.onload() = function(){}; 과 유사
+        $(document).ready(
+            function() {
+                console.log("실행되었습니다");
+            }
+        );
+        $( ()=>{console.log("숨겨진 이야기가 시작됩니다.")} );
+
+       // document.querySelector().addEventListener("이벤트타입", 함수)
+
+       $("#title").on('click', function(){
+        console.log("숨겨진 이야기가 시작됩니다.");
+       });
+
+
+    // css와 동일한 선택자를 통해서 접근 가능 
+       console.dir($("#list li:eq(1)"));
+
+    // 요소의 값을 메소드를 통해 가져온다 
+    const title = $('#title')   
+    console.log(title.html());
+    title.html("원하는 값으로 수정합니다.");
+
+
+    // setter뒤에 setter ( 값을 수정하는 메소드) 를 계속해서 연결 할 수 있다. 
+    $('#name').val("값을 넣어 줄 수있습니다.").attr('style','color:red');
+
+       //요소 생성 추가 삭제 
+
+      const pTag = $("<div>").append($("<p>").html("추가된 내용입니다."));
+        $('body').append(pTag);
+
+        $('#list li:eq(2)').remove();
+        //복제요소 
+        $('body').append(pTag.clone())
+    </script>
+
+</body>
+</html>
