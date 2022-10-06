@@ -3,8 +3,16 @@ const todoButton = document.querySelector("#todoadd");
 const todoBoard = document.querySelector("#todoboard");
 
 todoButton.addEventListener("click", addTodo);
+
 function addTodo() {
-    const text = todoInput.value;
+    const text = todoInput.value
+    if(text === "") {
+        alert("Enter New Task");
+        return;
+    }
+    
+
+   
 
 
     // 새로 요소 생성
@@ -67,7 +75,7 @@ function getTodayLabel() {
     var week = new Array('SUN','MON','TUE','WED','THU','FRI','SAT');
     var today = new Date().getDay();
     var todayLabel = week[today];
-    return "-"+todayLabel;}
+    return todayLabel;}
 
     const daybig = document.querySelector("#daybig");
 
@@ -84,8 +92,8 @@ function getTodayLabel() {
     const month2 = String(date.getMonth()+1).padStart(2, "0");
     const date2 = String(date.getDate()).padStart(2, "0");
 
-    todayd.innerHTML= month2 + "/";
-    todayd2.innerHTML= date2+ "/";
+    todayd.innerHTML= month2 ;
+    todayd2.innerHTML= date2;
     todayd3.innerHTML= year2;
 
 
